@@ -1,0 +1,28 @@
+deca - exponentiation of ten
+    e.g. 123 = 100 x 1 + 10 x 2 + 1 X 3
+
+binary - meaning two for zero and one
+    e.g. 3 = 011
+    32 16 8 4 2 1
+    0  0  0 0 1 1
+
+a bit is a placeholder for a number
+
+a byte is 8 bits
+
+tiny transistors store information on your computer hardware using positive or negative charges - binary
+
+in order to be able to represent other data such as letters, a mapping of numbers to letters are used
+    e.g. ascii - A  B  C  D  E  F
+                 65 66 67 68 69 70
+
+abstraction - a layering of simple ideas on top of one another to build more complex models
+
+algorithm - step by step instructions for solving a problem
+  e.g. finding a name in a phone book
+  page by page = n
+  start in middle split in half every time not found = n/2
+
+pseudocode - writing out steps of code in a human readable manner
+
+boolean - a question with a true or false answer - allows for logic

@@ -1,0 +1,27 @@
+the semicolon ; is the programming equivalent of a period .
+
+source code - human like syntax
+machine code - binary that CPUs can understand
+compilers - translates source code into machine code
+library - a collection of preprogrammed code/functions
+data types - types of variables
+
+single quotes - meant for single characters 'Y' or 'N'
+double quotes - meant for numerous characters "yes" or "no"
+floating point imprecision - 
+
+IDE - integrated development environment
+    a uniform development environment makes it easy for people, groups, and companies to ensure code works across all people and machines
+
+CLI - command line environment
+
+command line arguments - allows you to do certain things in the command line
+    e.g. clang -o hello hello.c
+    this will name the executable file hello rather than a.out
+
+to run a program coded in C you have to run it through a compiler
+    e.g. clang filename.c
+    compiles and produces an a.out file
+
+to fun a file
+    e.g. ./filename

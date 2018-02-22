@@ -18,4 +18,9 @@ int main(void)
         printf("hello, world\n");
     }
 
+    // Pset 1
+
+    // Implementation of Mario - more comfortable
+    
+
 }

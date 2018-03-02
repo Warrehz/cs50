@@ -45,6 +45,7 @@ int main(void)
 
     tempcc = ccnumber;
 
+    // Find sum of digit * 2 for every other num starting with second to last
     for (int i = 0; i < floor(digits / 2); i++)
     {
         if (i == 0)
@@ -66,14 +67,25 @@ int main(void)
 
     finalSum = digitSum + addSum;
 
+
+    // If card is valid, determine what type of card used
     if (finalSum % 10 != 0 || ccnumber == 0)
     {
         printf("WARNING: NOT A VALID CARD\n");
     }
     else
     {
-        if (digit == 4) {
+        if (digit == 4)
+        {
             printf("VISA\n");
+        }
+        if (digits == 15)
+        {
+            printf("AMEX\n");
+        }
+        if (ccnumber > 5100000000000000 && ccnumber < 5600000000000000)
+        {
+            printf("MASTERCARD\n");
         }
     }
 

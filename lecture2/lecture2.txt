@@ -1,0 +1,20 @@
+you have to link your code against added libraries
+    e.g. #include <cs50.h>
+    when compiling: clang hello.c -lcs50
+    make hello gets rid of needing to use additional command line arguments
+
+preprocessing - replaces significant keywords with the specified file of code
+    e.g. #include <cs50.h>
+    #include says "get file cs50.h and past code here"
+    it then becomes something similar to
+    ...
+    int printf(const char *format, ...)
+    ...
+
+compiling - takes source code written by humans and turns it into assembly language
+
+assembling - takes assembly code and turns it into binary
+
+sentinel value = null = equal to all 0s in bits
+    even the number 0 maps to a certain set of bits
+    user can't really type or represent all 0s in bits

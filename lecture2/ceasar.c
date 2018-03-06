@@ -1,6 +1,7 @@
 // Simple Ceasar cipher code for strings
 
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -34,9 +35,15 @@ int main(int argc, string argv[])
     // Convert plaintext to cipher text using k
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
-        plaintext[i] += k;
+        if (islower(plaintext[i]))
+        {
+            plaintext[i] = (((plaintext[i] + k) - 97) % 26) + 97;
+        }
+        else if (isupper(plaintext[i]))
+        {
+            plaintext[i] = (((plaintext[i] + k) - 65) % 26) + 65;
+        }
     }
-
     printf("ciphertext: %s\n", plaintext);
 
     return 0;

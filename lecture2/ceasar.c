@@ -23,7 +23,7 @@ int main(int argc, string argv[])
     }
 
     // Finds how many times to rotate char when k > 26
-    while (k > 26)
+    while (k >= 26)
     {
         k-=26;
     }
@@ -32,8 +32,13 @@ int main(int argc, string argv[])
     plaintext = get_string("plaintext: ");
 
     // Convert plaintext to cipher text using k
+    for (int i = 0, n = strlen(plaintext); i < n; i++)
+    {
+        plaintext[i] += k;
+    }
 
+    printf("ciphertext: %s\n", plaintext);
 
-
+    return 0;
 
 }

@@ -18,3 +18,21 @@ assembling - takes assembly code and turns it into binary
 sentinel value = null = equal to all 0s in bits
     even the number 0 maps to a certain set of bits
     user can't really type or represent all 0s in bits
+
+    e.g. the string "Mical" would technically be "Mical/0"
+    this gives an easy method to loop over string
+    e.g. while(s[i] != '/0')
+         {
+            do something ...
+         }
+
+array - continuous chunk of data back to back
+    e.g.
+
+int main(void) - takes no command line arguments
+    if we want to prompt user for commands, we have to do so by creating them
+
+int main(int argc, string argv[]) - takes 2 inputs
+    do not have to be provided explicitly
+
+segmentation fault - touched RAM or memory that shouldn't have been

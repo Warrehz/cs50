@@ -1,0 +1,35 @@
+linear search
+    from left to right or right to left
+
+binary search
+    using sorted array, start in middle, if it's what i'm looking for return true
+    if it's to the left, use left half of array
+    if it's to the right, use the right half of array
+    repeat until element i'm lookin for is found
+
+*but how do we get an array or data set sorted?
+
+bubble sort
+    the highest number tends to bubble to the top so to speak
+
+    repeat until no swaps
+        for i from 0 to n-2
+            if i'th and i+1'th elements out of order
+                swap them
+
+selection sort
+    select the first number, compare to another, if smaller select that instead
+    once through the entire array, the smallest number in hand goes in first spot
+
+    for i from 0 to n-1
+        find the smallest element between i'th and n-1th
+        swap the smallest with the i'th element
+
+insertion sort
+
+    for i from 1 to n-1
+        call 0'th through i-1'th elements the "sorted side"
+        remove the i'th elements
+        insert it into the sorted side in order
+
+algorithms have running time associated with them

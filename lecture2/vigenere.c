@@ -25,15 +25,41 @@ int main(int argc, string argv[])
         }
     }
 
-    // Set key equal to second command line argument
-    string k = argv[1];
+    // Sets key to user input and store length
+    string key = argv[1];
+    int keyLen = strlen(key);
 
     // Get plaintext from user
     string p = get_string("plaintext: ");
 
     // Loop over length of string p
-    for (int i = 0, n = strlen(p); i < n; i++)
+    for (int i = 0, j = 0, n = strlen(p); i < n; i++)
     {
-        printf("%c", p[i]);
+
+        // Gets key to apply to letter
+        int letterKey = tolower(key[j % keyLen]) - 'a';
+
+        if (islower(p[i]))
+        {
+            // Formula for finding ciper letter based on key
+            printf("%c", 'a' + (p[i] - 'a' + letterKey) % 26);
+            j++;
+        }
+        else if (isupper(p[i]))
+        {
+            printf("%c", 'A' + (p[i] - 'A' + letterKey) % 26);
+            j++;
+
+        }
+        else
+        {
+            // Print char not upper or lower alpha
+            printf("%c", p[i]);
+        }
     }
+
+    printf("\n");
+    printf("KEY: %s\n", key);
+
+    return 0;
 }

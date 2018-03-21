@@ -33,3 +33,27 @@ insertion sort
         insert it into the sorted side in order
 
 algorithms have running time associated with them
+
+    bubble sort
+        (n - 1) + (n - 2) + (n - 3) + ... + 1
+        n(n - 1)/2
+        n^2/2 - n/2
+
+big o notation - an upper bound on an algorithms run time (worst case)
+    O(n^2)
+    O(n log n) - merge sort
+    O(n) - linear search has a running time on the order of n
+    O(log n) -  binary search has a running time on the order of log n
+    O(1) - symbolizes a constant step
+
+omega notation - lower bound on an algorithms running time (best case)
+    Ω(n^2)
+    Ω(n log n)
+    Ω(n) - bubble sort is minimally omega of n because it has to run through the list at least once
+    Ω(log n)
+    Ω(1) - linear search, binary search has the possibility of taking just one step
+
+theta notation - upper bound and lower bound are the same
+
+recursion - the act of a function calling itself
+    ensure you have a base case so that it doesn't happen infinitely

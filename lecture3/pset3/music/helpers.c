@@ -21,7 +21,29 @@ int duration(string fraction)
 // Calculates frequency (in Hz) of a note
 int frequency(string note)
 {
-    // TODO
+    //char m_note = note[0];
+    char acc;
+    int hz, oct;
+
+    if (strlen(note) == 3)
+    {
+        acc = note[1];
+        oct = note[2];
+    }
+    else
+    {
+        oct = note[1];
+    }
+
+    hz = 440 * (oct - 4);
+
+    if (hz < 0)
+    {
+        hz *= -1;
+    }
+
+    return hz;
+
 }
 
 // Determines whether a string represents a rest

@@ -22,20 +22,24 @@ int duration(string fraction)
 int frequency(string note)
 {
     //char m_note = note[0];
-    char acc;
-    int hz, oct;
+    int acc, hz, oct;
 
+    // Sets octave to last in string
+    oct = note[strlen(note) - 1];
+    // Accounts for position in ascii table
+    oct -= 48;
+
+    // Sets accidental to second in array if length is 3
     if (strlen(note) == 3)
     {
         acc = note[1];
-        oct = note[2];
     }
     else
     {
-        oct = note[1];
+        acc = 0;
     }
 
-    hz = 440 * (oct - 4);
+    hz = 440 * ((oct - 4) + 1);
 
     if (hz < 0)
     {
@@ -49,12 +53,12 @@ int frequency(string note)
 // Determines whether a string represents a rest
 bool is_rest(string s)
 {
-    if (strncmp(s, "", 1) < 0)
+    if (strncmp(s, "", 1))
     {
-        return true;
+        return false;
     }
     else
     {
-        return false;
+        return true;
     }
 }

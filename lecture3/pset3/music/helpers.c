@@ -46,6 +46,13 @@ int frequency(string note)
         hz *= -1;
     }
 
+    switch (expression)
+    {
+        case 'C' :
+        // formula for frequency
+        break;
+    }
+
     return hz;
 
 }

@@ -1,6 +1,7 @@
 // Helper functions for music
 
 #include <cs50.h>
+#include <math.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -22,7 +23,8 @@ int duration(string fraction)
 int frequency(string note)
 {
     //char m_note = note[0];
-    int acc, hz, oct;
+    int acc, oct;
+    double hz = 0.0;
 
     // Sets octave to last in string
     oct = note[strlen(note) - 1];
@@ -39,18 +41,60 @@ int frequency(string note)
         acc = 0;
     }
 
-    hz = 440 * ((oct - 4) + 1);
-
-    if (hz < 0)
-    {
-        hz *= -1;
-    }
-
-    switch (expression)
+    // Calcluates hz of major notes, not accounting for accidentals or oct
+    switch(note[0])
     {
         case 'C' :
-        // formula for frequency
-        break;
+            hz = 440 / (pow(2.0, (9.0 / 12.0)));
+            break;
+
+        case 'D' :
+            hz = 440 / (pow(2.0, (7.0 / 12.0)));
+            break;
+
+        case 'E' :
+            hz = 440 / (pow(2.0, (5.0 / 12.0)));
+            break;
+
+        case 'F' :
+            hz = 440 / (pow(2.0, (4.0 / 12.0)));
+            break;
+
+        case 'G' :
+            hz = 440 / (pow(2.0, (2.0 / 12.0)));
+            break;
+
+        case 'A' :
+            hz = 440;
+            break;
+
+        case 'B' :
+            hz = 440 * (pow(2.0, (2.0 / 12.0)));
+            break;
+
+        default :
+            return 0;
+
+    }
+
+    // Accounts for sharp and flat notes
+    if (acc == 98)
+    {
+        hz /= pow(2.0, (1.0 / 12.0));
+    }
+    else if (acc == 35)
+    {
+        hz *= pow(2.0, (1.0 / 12.0));
+    }
+
+    // Accounts for octaves
+    if (oct < 4)
+    {
+        hz /= pow(2.0, (4 - oct));
+    }
+    else if (oct > 4)
+    {
+        hz *= pow(2.0, (oct - 4));
     }
 
     return hz;

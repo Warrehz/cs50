@@ -1,0 +1,21 @@
+a location or address is given the word pointer
+pointer can be thought of as a location in memory
+    e.g. have string s = "mical"
+         s is a variable that points to location of "mical" in memory
+
+string in C is really just a synonym for char *
+    e.g. string s = "mical", char *s = "mical"
+         * is the symbol given to represent pointer, char indicates the data type pointed to
+
+malloc - stands for memory allocation, a function that takes one argument and reserves that number of bytes
+    e.g. char *name = malloc(10);
+        reserves 10 back to back chunks of memory and returns the address of the first slot
+
+* - multiplication
+    e.g. 4 * 4;
+char *variable - declaring a variable
+    e.g. char *name = "mical";
+*(s + i) - go to address
+
+& - will get the address of a variable
+    e.g. &name - gets address of variable name
